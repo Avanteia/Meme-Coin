@@ -3,8 +3,8 @@ import { Rocket, LineChart as ChartLineUp, Wallet, Users, Twitter, MessageCircle
 
 function App() {
   const [scrollY, setScrollY] = useState(0);
-  const [price, setPrice] = useState("0.00000123");
-  const [holders, setHolders] = useState("12,345");
+  const [price, setPrice] = useState("0.0000420");
+  const [holders, setHolders] = useState("69,420");
 
   useEffect(() => {
     const handleScroll = () => setScrollY(window.scrollY);
@@ -14,8 +14,31 @@ function App() {
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-purple-900 via-indigo-900 to-black text-white">
+      {/* Navbar */}
+      <nav className="fixed top-0 left-0 w-full bg-black/70 backdrop-blur z-20">
+        <div className="container mx-auto flex justify-between items-center px-4 py-4">
+          <div className="flex items-center gap-2">
+            <img
+              src="./skibidi-removebg-preview.png"
+              alt="Skibidi Toilet Logo"
+              className="w-10 h-10"
+            />
+            <h1 className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-yellow-400 to-pink-500">
+              Skibidi Toilet Coin 🚽
+            </h1>
+          </div>
+          <div className="flex gap-6">
+            <a href="#home" className="hover:text-yellow-400">Home</a>
+            <a href="#presale" className="hover:text-yellow-400">Presale</a>
+            <button className="bg-gradient-to-r from-pink-500 to-yellow-500 px-4 py-2 rounded-full font-bold hover:scale-105 transition-transform">
+              Connect Wallet
+            </button>
+          </div>
+        </div>
+      </nav>
+
       {/* Hero Section */}
-      <header className="relative min-h-screen flex items-center justify-center overflow-hidden">
+      <header id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
         <div 
           className="absolute inset-0 opacity-20"
           style={{
@@ -28,16 +51,16 @@ function App() {
         <div className="container mx-auto px-4 text-center relative z-10">
           <div className="animate-bounce mb-8">
             <img 
-              src="https://images.unsplash.com/photo-1614853316476-de00d14cb1fc?auto=format&fit=crop&q=80" 
-              alt="WOOFCOIN Mascot" 
+              src="/skibidi-removebg-preview.png"
+              alt="Skibidi Toilet Mascot" 
               className="w-32 h-32 mx-auto rounded-full shadow-2xl"
             />
           </div>
           <h1 className="text-6xl md:text-8xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-yellow-400 to-pink-500">
-            WOOFCOIN
+            Skibidi Toilet Coin 🚽
           </h1>
           <p className="text-xl md:text-2xl mb-8 text-gray-300">
-            The Most Memeable Token in the Galaxy! 🚀
+            Flush Your Way to the Moon! 🌕🚀
           </p>
           <div className="flex flex-wrap justify-center gap-4 mb-12">
             <button className="bg-gradient-to-r from-pink-500 to-yellow-500 px-8 py-3 rounded-full font-bold hover:scale-105 transition-transform">
@@ -55,14 +78,14 @@ function App() {
       </header>
 
       {/* Tokenomics Section */}
-      <section className="py-20 bg-black/50 backdrop-blur">
+      <section id="presale" className="py-20 bg-black/50 backdrop-blur">
         <div className="container mx-auto px-4">
-          <h2 className="text-4xl font-bold text-center mb-16">Tokenomics</h2>
+          <h2 className="text-4xl font-bold text-center mb-16">Skibidi Tokenomics 🚽</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
-              { icon: <Coins className="w-12 h-12" />, title: "1 Quadrillion", desc: "Total Supply" },
-              { icon: <Fire className="w-12 h-12" />, title: "50% Burned", desc: "Forever Locked" },
-              { icon: <ChartLineUp className="w-12 h-12" />, title: "3/3", desc: "Buy/Sell Tax" }
+              { icon: <Coins className="w-12 h-12" />, title: "420 Trillion", desc: "Total Supply" },
+              { icon: <Fire className="w-12 h-12" />, title: "69% Burned", desc: "Forever Gone 💥" },
+              { icon: <ChartLineUp className="w-12 h-12" />, title: "5/5", desc: "Buy/Sell Tax" }
             ].map((item, i) => (
               <div key={i} className="bg-white/5 rounded-2xl p-6 text-center hover:bg-white/10 transition-colors">
                 <div className="flex justify-center mb-4 text-yellow-400">{item.icon}</div>
@@ -77,12 +100,12 @@ function App() {
       {/* Roadmap Section */}
       <section className="py-20">
         <div className="container mx-auto px-4">
-          <h2 className="text-4xl font-bold text-center mb-16">Roadmap</h2>
+          <h2 className="text-4xl font-bold text-center mb-16">Flush Map 🚽</h2>
           <div className="max-w-4xl mx-auto">
             {[
-              { phase: "Phase 1", items: ["Website Launch", "Community Building", "Token Launch"] },
-              { phase: "Phase 2", items: ["CEX Listings", "NFT Collection", "Marketing Push"] },
-              { phase: "Phase 3", items: ["Mobile App", "Governance", "Metaverse Integration"] }
+              { phase: "Phase 1", items: ["Website Flush", "Community Building", "Token Launch"] },
+              { phase: "Phase 2", items: ["CEX Listings", "NFT Collection (Toilet Seats)", "Marketing Flush"] },
+              { phase: "Phase 3", items: ["Mobile App", "Skibidi DAO", "Metaverse Toilets"] }
             ].map((phase, i) => (
               <div key={i} className="flex gap-4 mb-12">
                 <div className="flex flex-col items-center">
@@ -111,7 +134,7 @@ function App() {
       {/* Community Section */}
       <section className="py-20 bg-black/50">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-4xl font-bold mb-16">Join Our Community</h2>
+          <h2 className="text-4xl font-bold mb-16">Join the Skibidi Army 🚽</h2>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
             {[
               { icon: <Twitter />, name: "Twitter", link: "#" },
@@ -137,7 +160,7 @@ function App() {
       {/* Footer */}
       <footer className="py-8 bg-black/80 text-center">
         <div className="container mx-auto px-4">
-          <p className="text-gray-400">© 2025 WOOFCOIN. All rights reserved.</p>
+          <p className="text-gray-400">© 2025 Skibidi Toilet Coin. All rights reserved. 🚽</p>
         </div>
       </footer>
     </div>
