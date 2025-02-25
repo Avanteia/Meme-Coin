@@ -4,13 +4,28 @@ import { Rocket, LineChart as ChartLineUp, Wallet, Users, Twitter, MessageCircle
 function App() {
   const [scrollY, setScrollY] = useState(0);
   const [price, setPrice] = useState("0.0000420");
-  const [holders, setHolders] = useState("69,420");
+  const [walletAddress, setWalletAddress] = useState("");
 
   useEffect(() => {
     const handleScroll = () => setScrollY(window.scrollY);
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  // Function to connect wallet
+  const connectWallet = async () => {
+    if (window.ethereum) {
+      try {
+        const accounts = await window.ethereum.request({ method: 'eth_requestAccounts' });
+        const address = accounts[0];
+        setWalletAddress(`${address.slice(0, 6)}...${address.slice(-4)}`);
+      } catch (error) {
+        console.error("Failed to connect wallet:", error);
+      }
+    } else {
+      alert("MetaMask is not installed. Please install MetaMask to connect your wallet.");
+    }
+  };
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-purple-900 via-indigo-900 to-black text-white">
@@ -24,14 +39,17 @@ function App() {
               className="w-10 h-10"
             />
             <h1 className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-yellow-400 to-pink-500">
-              Skibidi Toilet Coin 🚽
+              Skibidi Toilet 🚽
             </h1>
           </div>
           <div className="flex gap-6">
             <a href="#home" className="hover:text-yellow-400">Home</a>
             <a href="#presale" className="hover:text-yellow-400">Presale</a>
-            <button className="bg-gradient-to-r from-pink-500 to-yellow-500 px-4 py-2 rounded-full font-bold hover:scale-105 transition-transform">
-              Connect Wallet
+            <button
+              onClick={connectWallet}
+              className="bg-gradient-to-r from-pink-500 to-yellow-500 px-4 py-2 rounded-full font-bold hover:scale-105 transition-transform"
+            >
+              {walletAddress ? walletAddress : "Connect Wallet"}
             </button>
           </div>
         </div>
