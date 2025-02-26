@@ -168,7 +168,7 @@ function App() {
               { icon: <Twitter />, name: "x", link: "https://x.com/SkibidiPolygon" },
               { icon: <MessageCircle />, name: "Telegram", link: "https://discord.gg/JA8wEAwc" },
               { icon: <Discord />, name: "Discord", link: "https://discord.gg/JA8wEAwc" },
-              { icon: <Instagram />, name: "Instagram", link: "#" }
+              { icon: <Instagram />, name: "Instagram", link: "https://www.instagram.com/skibidipolygon/?hl=en" }
             ].map((social, i) => (
               <a
                 key={i}
