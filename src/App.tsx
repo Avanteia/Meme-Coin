@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Rocket, LineChart as ChartLineUp, Wallet, Users, Twitter, MessageCircle, Disc as Discord, Instagram, ArrowRight, Coins, Siren as Fire } from 'lucide-react';
+import { Book } from "lucide-react";
 
 function App() {
   
@@ -171,7 +172,7 @@ function App() {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
             {[
               { icon: <Twitter />, name: "x", link: "https://x.com/SkibidiPolygon" },
-              { icon: <MessageCircle />, name: "Telegram", link: "https://discord.gg/JA8wEAwc" },
+              { icon: <Book />, name: "Telegram", link: "https://discord.gg/JA8wEAwc" },
               { icon: <Discord />, name: "Discord", link: "https://discord.gg/JA8wEAwc" },
               { icon: <Instagram />, name: "Instagram", link: "https://www.instagram.com/skibidipolygon/?hl=en" }
             ].map((social, i) => (
