@@ -32,7 +32,7 @@ function App() {
         <div className="container mx-auto px-4 text-center relative z-10">
           <div className="animate-bounce mb-8">
             <img 
-              src="/skibidi-removebg-preview.png"
+              src="/skibidi3.png"
               alt="Skibidi Toilet Mascot" 
               className="w-32 h-32 mx-auto rounded-full shadow-2xl"
             />
