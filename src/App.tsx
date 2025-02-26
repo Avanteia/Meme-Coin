@@ -52,9 +52,14 @@ function App() {
   Buy Now
 </a>
 
-            <button className="bg-white/10 backdrop-blur px-8 py-3 rounded-full font-bold hover:bg-white/20 transition-colors">
-              Join Community
-            </button>
+<a
+  href="https://discord.gg/JA8wEAwc"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="bg-white/10 backdrop-blur px-8 py-3 rounded-full font-bold hover:bg-white/20 transition-colors"
+>
+  Join Community
+</a>
           </div>
           <div className="bg-white/5 backdrop-blur rounded-xl p-4 inline-block">
             <p className="text-sm text-gray-400">Current Price</p>
