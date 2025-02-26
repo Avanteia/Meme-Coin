@@ -43,12 +43,15 @@ function App() {
             Flush Your Way to the Moon! 🌕🚀
           </p>
           <div className="flex flex-wrap justify-center gap-4 mb-12">
-          <button
-              onClick={() => navigate("/presale")}
-              className="bg-gradient-to-r from-pink-500 to-yellow-500 px-8 py-3 rounded-full font-bold hover:scale-105 transition-transform"
-            >
-              Buy Now
-            </button>
+          <a
+  href="https://skibidi-presale.vercel.app/"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="bg-gradient-to-r from-pink-500 to-yellow-500 px-8 py-3 rounded-full font-bold hover:scale-105 transition-transform"
+>
+  Buy Now
+</a>
+
             <button className="bg-white/10 backdrop-blur px-8 py-3 rounded-full font-bold hover:bg-white/20 transition-colors">
               Join Community
             </button>
