@@ -45,7 +45,7 @@ function App() {
           </p>
           <div className="flex flex-wrap justify-center gap-4 mb-12">
           <a
-  href="https://skibidi-presale.vercel.app/"
+  href="https://presale.skibiditoiletcoin.fun/"
   target="_blank"
   rel="noopener noreferrer"
   className="bg-gradient-to-r from-pink-500 to-yellow-500 px-8 py-3 rounded-full font-bold hover:scale-105 transition-transform"
